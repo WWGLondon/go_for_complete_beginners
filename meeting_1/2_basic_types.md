@@ -52,3 +52,54 @@ That is because each bit in a byte represents a value of either 128, 64, 32, 16,
 Now the reason we have all of these diffent types for a number is because of the amount of memory it uses to store the value.  So an int8 would have a maximum value of 256 which is the sum of all 8 bits, an int16 or 16 bit number would have a maximum value of 65532 which again is the sum of the bits because in a 16 bit number the 9th bit has a value of 256 and the 10th 512 and so on.
 
 Do not worry too much about this and in fact feel free to forget it as most of the time when you are dealing with numbers you will only use int which on a modern computer is a 64 bit number.  It is interesting to know the underlying theory of how that works if you feel the need to liven up a boring dinner party with some interesting geek facts.
+
+Have a go at trying to declare a number like we did in our first example, got it?  You should have typed something like this"
+
+```
+mynumber := 23
+```
+
+Now if you look closely you can see that we have not used speech marks this time, if you had declared your variable like this:
+
+```
+mynumber := "23"
+```
+
+You would have created a string as the compiler is using the speech marks present to infer the type as string not as a number.  Let's look at some simple maths, if we would like to add two numbers we can do something like this:
+
+```
+mynumber1 := 7
+mynumber2 := 16
+
+mynumber3 := mynumber1 + mynumber2
+```
+
+So what if we had used speech marks?
+
+```
+mynumber1 := "7"
+mynumber2 := "16"
+
+mynumber3 := mynumber1 + mynumber2
+```
+
+What do you think mynumber3 would equal now still 23?
+It would in fact equal "716" as we are no longer adding two numbers but joining two strings, ok, one last example to illustrate types.
+
+The benefit of type safety is to save you from making simple mistakes, if you attempt to either assign an integer to a string variable or attempt to add a string and an integer then the compiler will tell you that this is invalid take a look at this example.
+
+```
+mynumber := 7
+mynumber = "16"
+```
+
+This would not be allowed as you can not assign a string to a variable which has been declared as an integer.
+
+```
+mynumber1 := 7
+mynumber2 := "16"
+
+mynumber3 := mynumber1 + mynumber2
+```
+
+This is also invalid and the compiler will complain about this before you end up with a difficult bug to find when running your application.
