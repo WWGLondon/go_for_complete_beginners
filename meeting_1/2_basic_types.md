@@ -103,3 +103,63 @@ mynumber3 := mynumber1 + mynumber2
 ```
 
 This is also invalid and the compiler will complain about this before you end up with a difficult bug to find when running your application.
+
+## Floating point numbers
+Integers are useful but the world is not always represented by whole numbers, what about currency we often use decimal places to represent currency and what about when we divide two numbers which would ordinarily produce a remainder.  If we use integers for the following example what do you think the outcome will be?
+
+```
+myint1 := 3
+myint2 := 2
+
+myint3 := myint1 / myint2
+```
+
+If you guessed *1.5* then this is the wrong answer as an integer has no capability for representing decimal places the actual answer would be *1*.  Now in mathematics we are told to round up if the reminder is .5 or greater however when we use integers for division like this we are not rounding the value we are stripping the remainder completely.  To solve this problem many programming languages have a special type called `float` which stands for a floating point number.  In Go we can create a floating point number like this:
+
+```
+myfloat := 1.5
+```
+
+So if we have a float what if we did something like the below example, what do you think the value of myfloat3 will be?
+
+```
+myfloat1 := 1.5
+myfloat2 := 2
+
+myfloat3 := myfloat1 * myfloat2
+```
+
+If you guessed *3* then again this unfortunately is the wrong answer, Go will not allow you to multiply these two numbers in the same way as it would not allow you to add a string and an integer from our earlier example as whilst they are both numbers they are not the same type.  *myfloat1* is actually a `float64` while *myfloat2* is actually an `int`.  If we change the example to be written like the below then what do you think the output will be?
+
+```
+myfloat1 := 1.5
+myfloat2 := 2.0
+
+myfloat3 := myfloat1 * myfloat2
+```
+
+If you answered *3* then this time you are correct as both numbers are both type float64.
+
+So why do we not just make all numbers floating point?
+Well we again need to think about efficiency to store a float in memory it is actually stored not explictly as ones and zeros but in parts which allow the calculation of the number, therefore for a 32 bit floating point number you loose 8 bits to store the exponent.  Now in additon loosing storage we also need to consider the problem that storing an whole number as a float can actually introduce rounding problems when you are multiplying numbers.   *Going to park this as I am not sure the explanation is helping*
+
+## Boolean
+A boolean or bool value is just a fancy name for something which is either true or false, in Go lang we can create a boolean with the following syntax.
+
+```
+mybool := true
+var myfalsebool bool
+```
+
+If you create a boolean value and do not associate it a value then its default is *false* when creating boolean values then we need to remember to not use speech marks or you will create a string and as we learned when looking at integers "1" is not equal to 1 therefore "true" is not equal to true.
+
+## Default Values
+Lets take a look at some other default values, create an instance of an integer and a string variable and do not assign it a value.  What do you think the default will be?
+
+```
+var mystring string // = ""
+var myinteger int // = 0
+var mybool bool // = false
+```
+
+Types always have a default value there is an exception for the special type interface and we will look at that later.  
