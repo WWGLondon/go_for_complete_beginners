@@ -1,4 +1,4 @@
-# WWGLondon & GoBridge workshop: Learn to code with Go!
+# WWGLondon & GoBridge workshop: Learn to code with Go! - DRAFT
 
 This repository is forked from Natalie P's Go for complete beginners course -> https://github.com/Pisush/go_for_complete_beginners, originally written as a part of GoBridge's training modules for beginners level. WWGLondon run the workshop together with GoBridge on January - February 2017. This is our version of the workshop, which was tailored to fit in three Saturdays instead of six meetings.
 
