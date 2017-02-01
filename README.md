@@ -8,11 +8,13 @@ Originally, the course was written as a part of [GoBridge's training modules](ht
 
 ## Go for Complete Beginners: In a nutshell
 
-- This workshop is designed to teach complete beginners (people with no coding experience) programming principles using Go.
-- It is planned for 3 meetings of 6 hours each, including a lunch break and a couple of short coffee break.
+- This workshop is designed to teach programming principles using Go.
+- The targeted audience are people with no coding experience.
+- The length of the workshop is ~18h, this can be broken to 3 classes of ~6h each.
+- Our typical class runs from 10am until 5pm on a Saturday, including a lunch break and a couple of short coffee breaks.
+- In between classes, the instructors are to be available on the Gophers slack to answer questions.
 - This workshop is loosely based on the workshop that was held by [Women Techmaker Berlin](https://www.meetup.com/gdgberlin/events/233883713/) on 2016.
-- We met every Saturday and in-between classes the instructors were available on the Gophers slack to answer questions.
-- The content of the course outline is an adjustment of How I Start to be complete-beginner friendly, with the kind permission of Peter Bourgon. (As mentioned on the original repository)
+- The content of the course outline is an adjustment of [How I Start](https://howistart.org/posts/go/1) to be complete-beginner friendly, with the kind permission of [Peter Bourgon](https://peter.bourgon.org/) (as mentioned on the original repository).
 
 ### How to read this guide
 
