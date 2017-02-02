@@ -17,13 +17,17 @@ Now that people warmed up to the idea, we can actually start introducing what's 
 - Fun
 - Productive
 
+**TODO:**
+
+- justify the three aspects above
+- include brad fitzpatrick slide from Japan GoConf'15
+- introduce concurrency in a simple analogy
+
 ## Real-life project example
 
 I shared a project at NOTHS (the company I work for when I wrote this), it was a small search term suggester service, originally written in Ruby then gets a rewrite with Go. Point out how much faster development process in Go, performance improvements gained; such as: lower error rates, less or no zero time outs, rpm on a certain thread numbers, etc. It would help if this was presented with a side-by-side graph, so much more story you can tell with that. I did mine using [Nic Jackson's bench package](https://github.com/nicholasjackson/bench).
 
-## Learning sources & community
-
-Learning sources and community goes hand-in-hand, each aspect supports the other.
+## Learning sources
 
 - [Golang.org](https://golang.org)
   - the source of Go's official documentation, take a look at [A Tour of Go](https://tour.golang.org/)
@@ -31,6 +35,14 @@ Learning sources and community goes hand-in-hand, each aspect supports the other
   - Explain that package documentation lives here (a little demo on how handy to use `pkg/bytes/#Contains` for example)
   - Explain the difference between `pkg` and `doc`
 
+## Community
+
+- GoBridge
+- Women Who Go
+- Newsletter
+- Twitter
+- Conferences
+- slack
 
 ## A teaser
 
@@ -58,10 +70,12 @@ https://golang.org/cmd/go/
 - explain the machine on playground
 - explain why time now in playground points to ...
 - Hello world! (maybe *Ellie McHugh*'s version)
+  - Compilers and Go compilers
+  - Intro into coding, introduce Variable, Constant, If condition
 
-## What's Go popularity in the industry
+## Where Go stands in the industry
 
----- it jobs watch
+I had a screenshot from http://www.itjobswatch.co.uk/jobs/uk/go.do, showing the demand in the industry has risen in the last couple of years. How many  permanent job cited. This will go well with the next section, where we introduce the many companies that has adopted Go in the current time.
 
 ## Companies using Go
 
