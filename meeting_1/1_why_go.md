@@ -13,13 +13,55 @@ Now that people warmed up to the idea, we can actually start introducing what's 
 
 ## Oh the fancy words!
 
+- Fast
+- Fun
+- Productive
+
 ## Real-life project example
 
-## Community
+I shared a project at NOTHS (the company I work for when I wrote this), it was a small search term suggester service, originally written in Ruby then gets a rewrite with Go. Point out how much faster development process in Go, performance improvements gained; such as: lower error rates, less or no zero time outs, rpm on a certain thread numbers, etc. It would help if this was presented with a side-by-side graph, so much more story you can tell with that. I did mine using [Nic Jackson's bench package](https://github.com/nicholasjackson/bench).
+
+## Learning sources & community
+
+Learning sources and community goes hand-in-hand, each aspect supports the other.
+
+- [Golang.org](https://golang.org)
+  - the source of Go's official documentation, take a look at [A Tour of Go](https://tour.golang.org/)
+- [Go official package documentation](https://golang.org/pkg)
+  - Explain that package documentation lives here (a little demo on how handy to use `pkg/bytes/#Contains` for example)
+  - Explain the difference between `pkg` and `doc`
+
 
 ## A teaser
 
+Assuming that by this point the installfest has been done, it's good to have a little bit play around with Go. I think the students would very much like to see Go in action at this point, try to play with these:
+
+- go commands
+- playground
+
+Don't go too deep or too expansive, you don't want to confuse participants too soon. Show some of the more popular one with examples and remember to say "we will learn more in the workshop..."
+
+### go commands
+
+https://golang.org/cmd/go/
+
+- **go version**, this is a good place to start, you can show the most current version atm, highlights a couple of cool things for this version.
+- **go doc**, demo how documentation shown for package or symbol.
+- **go get**, download and install packages and dependencies, **TODO**: find example of what's beneficial to get at this point of learning.
+- **go build**, this compile packages and dependencies, demo on how it got compiled.
+- **go clean**, show that when we run this command object files would get removed.
+- **go run**, a little demo showing that there's a binary file generated when we run this command would be nice.
+
+### playground
+
+- a little history
+- explain the machine on playground
+- explain why time now in playground points to ...
+- Hello world! (maybe *Ellie McHugh*'s version)
+
 ## What's Go popularity in the industry
+
+---- it jobs watch
 
 ## Companies using Go
 
