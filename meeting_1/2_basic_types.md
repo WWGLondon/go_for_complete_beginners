@@ -205,4 +205,119 @@ var mybool bool // = false
 Types always have a default value there is an exception for the special type interface and we will look at that later.  
 
 ## Constants
-These are special variables that can never change.
+These are special variables that can never change, think about things like Pie or the gravity these are universal constants that you would never want to accidentailly overwrite with a different value.  Handily Go has the keyword `const` which we can use just for this purpose.
+
+```
+const (
+  Pie = 3.14159
+  GravityMs = 9.806 // Meters per second
+)
+```
+
+You may wonder if the brackets which save me from typing const multiple times is unique to Constants?  They are not I can also declare variables using the same notation so...
+
+```
+const (
+  North = 0 //degrees
+  South = 180
+)
+
+var (
+  MyString = "something"
+  MyInt = 1
+)
+```
+
+is the same as...
+
+```
+const North = 0
+const South = 180
+
+var MyString = "something"
+var MyInt = 1
+```
+
+## Functions
+We have already seen that the main entry point to our application is `func main()`.  This is a function and while you could write your entire program inside of this function it would not be a great idea as it will make debugging and maintenance far more complex.
+We use functions to both breakup our code into readable blocks of behaviour and also to allow for code reuse.  Consider the following application.
+
+```
+func main() {
+ myPosition := 10
+ kittenPosition := 11
+ foodBowl := 0
+ 
+ if kitten.isBitey && kitten.isAngry && kitten.isScratchy {
+   myPosition = myPosition - 10
+ }
+ 
+ foodBowl += 10
+}
+```
+
+Ok this code is fake-ish but would compile, it does not read very well, in fact it has probably taken you more than 30 seconds to try and figure out what is going on and you are still not much clearer.  One approach is to add comments to the code like the below example:
+
+```
+func main() {
+ myPosition := 10
+ kittenPosition := 11
+ foodBowl := 0 // empty
+ 
+ // if kitten is angry
+ if kitten.isBitey && kitten.isAngry && kitten.isScratchy {
+   myPosition = myPosition - 10 // move to safe position
+ }
+ 
+ foodBowl += 10 // add food portion to the bowl
+}
+```
+
+Now this explains what is going on but it probably took you even longer to read.  When you are coding you will spend far longer reading code than you will writing it so try to think about yourself as an author not a computer.  The computer does not care how you write your code it can understand it just fine any way, but you are not writing your code to be read by the computer you are writing it to be read by a human.  We need to be a little more J.K Rowling than Macbook Pro so lets see how we could use functions and constants to make this code read a little better.
+
+```
+const (
+  SafeDistance = 10
+  FoodQuantity = 10
+  Empty = 0
+)
+
+var (
+  myPosition = 10
+  kittenPostion = 11
+  foodBowl = Empty
+  kitten = Kitten{}
+)
+
+func main() {
+  feedKitten(kitten)
+}
+
+func feedKitten(kitten Kitten) {
+  if kittenIsDangerous(kitten) {
+    moveToSafeDistance()
+   }
+   
+   feedLunch()
+}
+
+func kittenIsDangerous(kitten *Kitten) bool {
+  if kitten.isBitey &&
+     kitten.isAngry &&
+     kitten.isScratchy {
+       return true
+  }
+  
+  return false
+}
+
+func moveToSafeDistance() {
+  myPosition = kittenPosition - safeDistance
+}
+
+func feedLunch() {
+  foodBowl += foodPortion
+}
+```
+
+## Logical operators
