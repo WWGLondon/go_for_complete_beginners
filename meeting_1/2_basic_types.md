@@ -1,4 +1,4 @@
-# Basic Types
+# Basic Types - DRAFT WORK IN PROGRESS
 Types in Go are things like numbers, strings, booleans which represent true or false and more complex objects which we will talk about in the next session.
 
 Firstly we are going to take a look at how we can create and assign variables, a variable is an instance of a type.  If you think of a type as a human and a variable as you then you are an instance of human, of course we are all instances of humans and like variables we are all different but be all of the same type.
