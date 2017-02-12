@@ -153,6 +153,46 @@ var myfalsebool bool
 
 If you create a boolean value and do not associate it a value then its default is *false* when creating boolean values then we need to remember to not use speech marks or you will create a string and as we learned when looking at integers "1" is not equal to 1 therefore "true" is not equal to true.
 
+## Declaring variable
+Now just to keep you on your toes there are three different ways we can declare a vairable in go the first is the one we have been using so far.
+
+`variable := "some value"`
+
+The key thing to note here is the special operator `:=` the `:` part of this operator means *create* the second the `=` is assign so the full operator is *create and assign*
+
+We do not need to explicitly specify a type as the compiler infers this from the assignment for example.
+
+```
+myInteger := 1 // creates an int since the assigned value is a number
+myString := "a string" // creates a string since the assigned value is a string
+```
+
+This is all fairly simple but what when you want to create a variable but not assign any value? In this case we can use the `var` keyword and this works like so.
+
+```
+var myString string
+myString = "something"
+```
+
+Now note because we are not assigning a value we need to explicitly state the type.  All variables must have a type and this is why we must state it if we use this method.
+In the second line we are assigning a value using the `=` operator, if we try to use the `:=` operator to *create and assign* to an existing variable the compiler will complain as it can not create what already exists.
+
+We can also use the var operator to create a variable and assign it in one go using the below syntax.
+
+```
+var myString = "Something"
+```
+
+Why would you want to do this?  Whilst this is valid syntax inside of a function the use is mainly restricted to when you wish to declare a package level variable outside of a function like this example.
+
+```
+var myString = "Something"
+
+func PrintMyString() {
+  fmt.Println(myString) // prints Something to the output
+}
+```
+
 ## Default Values
 Lets take a look at some other default values, create an instance of an integer and a string variable and do not assign it a value.  What do you think the default will be?
 
@@ -163,3 +203,6 @@ var mybool bool // = false
 ```
 
 Types always have a default value there is an exception for the special type interface and we will look at that later.  
+
+## Constants
+These are special variables that can never change.
